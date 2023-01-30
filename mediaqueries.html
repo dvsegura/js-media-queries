@@ -8,11 +8,10 @@
   </head>
   <body>
     <h1 id="header-text">Media Queries with JavaScript</h1>
-    <div id="content-text" style="width: 100px; height: 100px"></div>
     <script>
       const mediaQuery = matchMedia("(max-width: 992px)");
       console.log(mediaQuery.matches);
-      const changeBackgroundColor = (mql) => {
+      const changeBackgroundColor = mql  => {
         mql.matches
           ? (document.body.style.backgroundColor = "red")
           : (document.body.style.backgroundColor = "yellow");
